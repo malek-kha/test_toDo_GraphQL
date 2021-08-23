@@ -9,16 +9,16 @@ const typeDefs = gql`
     type ToDoList {
         id: Int!
         title: String!
-        ToDo: [ToDo]!
+        ToDo: [ToDo]
     }
 
     type Query {
         ToDoList(title:String!): ToDoList
-        AllToDoList: [ToDoList!]!
+        AllToDoList: [ToDoList!]
     }
 
     type Mutation {
-        createToDo(name: String!): ToDo!
+        createToDo(name: String!): ToDoList!
         deleteToDo(id: Int!): ToDoList    
     }
 
